@@ -5,7 +5,7 @@ This repository contains a machine learning pipeline built using **Random Forest
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Thyroid disease recurrence prediction is valuable for clinicians to plan follow-ups and treatment.  
 This model uses structured patient data and applies preprocessing + classification to estimate recurrence probability.
@@ -23,7 +23,7 @@ The workflow includes:
 
 ---
 
-## 🗂 Dataset Structure
+## Dataset Structure
 
 The dataset must contain the following columns:
 
@@ -42,7 +42,7 @@ Target variable:
 
 ---
 
-## 🏗 Model Pipeline
+## Model Pipeline
 
 ```python
 preprocessor = ColumnTransformer(
@@ -66,7 +66,7 @@ pipeline = Pipeline(steps=[
 
 ---
 
-## ✅ Model Performance
+## Model Performance
 
 Example classification report:
 
@@ -82,7 +82,7 @@ weighted avg       0.97      0.97      0.97        96
 
 ---
 
-## 🔍 Making Predictions
+## Making Predictions
 
 ```python
 new_patient = {
@@ -114,23 +114,7 @@ print("Probability of recurrence:", round(probability, 4))
 
 ---
 
-## 💾 Saving & Loading Model
-
-### Save model
-```python
-import joblib
-joblib.dump(pipeline, "thyroid_model.pkl")
-```
-
-### Load model
-```python
-loaded_model = joblib.load("thyroid_model.pkl")
-loaded_model.predict(df_new)
-```
-
----
-
-## 📁 File Output Example
+## Output Example
 
 ```
 Recurred: No
@@ -139,14 +123,7 @@ Probability of recurrence: 0.0033
 
 ---
 
-## ⚠️ Disclaimer
-
-This model is **not a medical diagnostic tool**.  
-It should only be used for **research, academic, or clinical decision‑support**, not standalone medical judgment.
-
----
-
-## ✅ Requirements
+## Requirements
 
 ```
 pandas
@@ -159,18 +136,6 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-## 👨‍💻 Author
-
-Machine‑learning pipeline generated for thyroid disease recurrence prediction research.
-
----
-
-## 📜 License
-
-MIT License — free to use and modify.
 
 ---
 
