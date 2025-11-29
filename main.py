@@ -122,5 +122,3 @@ probability = model.predict_proba(df_new)[0][1]
 
 print("Recurred:", "Yes" if prediction == 1 else "No")
 print("Probability:", round(probability, 4))
-
-!pip freeze > requirements.txt
